@@ -13,6 +13,7 @@ namespace MyWebApplication.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+       
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -25,18 +26,18 @@ namespace MyWebApplication.Controllers
         {
             return ProductService.GetProducts();
         }
-        //[HttpPatch]"[FromBody]"
-        [Route("Rate")]
-        [HttpGet]
-        public ActionResult Get(
-            [FromQuery] string ProductId,
-            [FromQuery]int Rating)
-        {
-            ProductService.AddRating(ProductId, Rating);
+        ////[HttpPatch]"[FromBody]"
+        //[Route("Rate")]
+        //[HttpGet]
+        //public ActionResult Get(
+        //    [FromQuery] string ProductId,
+        //    [FromQuery]int Rating)
+        //{
+        //    ProductService.AddRating(ProductId, Rating);
 
-            return Ok();
-        }
-
-       
+        //    return Ok();
+        //}
+    
+        
     }
 }
